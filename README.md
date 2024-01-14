@@ -1,6 +1,11 @@
-# Deprecated
+# usage
+### gunzip .gz file
+### server
+./shadowsocks-server-linux64-1.1.5 -p 7777 -k 123456 -m rc4-md5
+### client
+./shadowsocks-local-linux64-1.1.5 -s my_ip -p 7777 -k 123456 -m rc4-md5 -l 1080
 
-Use https://github.com/shadowsocks/go-shadowsocks2 instead.
+export all_proxy=socks5://127.0.0.1:1080
 
 # shadowsocks-go
 
