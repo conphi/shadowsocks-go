@@ -9,6 +9,10 @@ export all_proxy=socks5://127.0.0.1:1080
 
 curl cip.cc
 
+curl ifconfig.me
+
+curl ifconfig.me/ip
+
 # shadowsocks-go
 
 Current version: 1.2.2 [![Build Status](https://travis-ci.org/shadowsocks/shadowsocks-go.png?branch=master)](https://travis-ci.org/shadowsocks/shadowsocks-go)
