@@ -14,21 +14,31 @@ curl ifconfig.me
 curl ifconfig.me/ip
 
 ### for mac os m1 chip
+```
 go install github.com/shadowsocks/shadowsocks-go/cmd/shadowsocks-local@latest
-
+```
 /usr/local/bin/ss
 ```
 #!/bin/bash
+networksetup -setsocksfirewallproxystate Wi-Fi on
 /Users/fuck/go/bin/shadowsocks-local -k 123456 -m rc4-md5 -p 7777 -l 1080 -s my_ip
 ```
 networksetup -listallnetworkservices
 
 networksetup -setsocksfirewallproxystate Wi-Fi on
 
+```
 networksetup -setsocksfirewallproxy Wi-Fi 127.0.0.1 1080
+```
 
 networksetup -setsocksfirewallproxystate Wi-Fi off
 
+
+/usr/local/bin/ess
+```
+#!/bin/bash
+networksetup -setsocksfirewallproxystate Wi-Fi off
+```
 
 # shadowsocks-go
 
