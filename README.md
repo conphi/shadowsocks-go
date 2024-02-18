@@ -13,6 +13,23 @@ curl ifconfig.me
 
 curl ifconfig.me/ip
 
+### for mac os m1 chip
+go install github.com/shadowsocks/shadowsocks-go/cmd/shadowsocks-local@latest
+
+/usr/local/bin/ss
+```
+#!/bin/bash
+/Users/fuck/go/bin/shadowsocks-local -k 123456 -m rc4-md5 -p 7777 -l 1080 -s my_ip
+```
+networksetup -listallnetworkservices
+
+networksetup -setsocksfirewallproxystate Wi-Fi on
+
+networksetup -setsocksfirewallproxy Wi-Fi 127.0.0.1 1080
+
+networksetup -setsocksfirewallproxystate Wi-Fi off
+
+
 # shadowsocks-go
 
 Current version: 1.2.2 [![Build Status](https://travis-ci.org/shadowsocks/shadowsocks-go.png?branch=master)](https://travis-ci.org/shadowsocks/shadowsocks-go)
