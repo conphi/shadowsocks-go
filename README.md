@@ -5,7 +5,9 @@
 ### client
 ./shadowsocks-local-linux64-1.1.5 -s my_ip -p 7777 -k 123456 -m rc4-md5 -l 1080
 
-export all_proxy=socks5://127.0.0.1:1080
+export https_proxy=socks5://127.0.0.1:1080
+
+~~export all_proxy=socks5://127.0.0.1:1080~~
 
 curl cip.cc
 
