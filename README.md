@@ -2,12 +2,14 @@
 ### gunzip .gz file
 ### server
 ./shadowsocks-server-linux64-1.1.5 -p 7777 -k 123456 -m rc4-md5
-### client
-./shadowsocks-local-linux64-1.1.5 -s my_ip -p 7777 -k 123456 -m rc4-md5 -l 1080
+### client for linux
+./shadowsocks-local-linux64-1.1.5 -p 7777 -k 123456 -m rc4-md5 -l 1080 -s my_ip
 
 export https_proxy=socks5://127.0.0.1:1080
 
 ~/.bashrc
+
+/etc/bash.bashrc for all users
 
 alias proxy='export all_proxy=socks5://127.0.0.1:1080; export http_proxy=socks5://127.0.0.1:1080; export https_proxy=socks5://127.0.0.1:1080'
 
@@ -19,7 +21,7 @@ curl ifconfig.me
 
 curl ifconfig.me/ip
 
-### for mac os m1 chip
+### client for mac os m1 chip
 ```
 go install github.com/shadowsocks/shadowsocks-go/cmd/shadowsocks-local@latest
 ```
