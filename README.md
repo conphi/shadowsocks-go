@@ -1,3 +1,13 @@
+# https://githubwyb.github.io/blogs/2021-03-05-shadowsocks/
+```
+apt install proxychains
+
+/etc/proxychains.conf
+[ProxyList]
+socks5 127.0.0.1 1080
+```
+
+
 # usage
 ### gunzip .gz file
 ### server
